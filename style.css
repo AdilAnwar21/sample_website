@@ -1,3 +1,20 @@
+@mixin transition {
+  @for $i from 1 through 50 {
+    &:nth-child(#{$i}) {
+      transition: transform 1s #{$i * .08}s cubic-bezier(.29,1.4,.44,.96);
+    }
+  }
+}
+
+@mixin alpha-attribute($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -209,6 +226,10 @@ footer > div {
         display: none;
     }
 
+    .btn-nav{
+      display: block!important;
+    }
+
     .header h1 {
         font-size: 15vw;
     }
@@ -247,6 +268,12 @@ footer > div {
     .header h1 {
         font-size: 12vw;
     }
+
+    .btn-nav{
+      display: block!important;
+    }
+
+
 
     footer {
         padding: 1em;
@@ -665,6 +692,11 @@ footer > div {
       padding-bottom: 0px;
       padding-left: 0px;
     }
+
+
+    .btn-nav{
+      display: block;
+    }
   
     .responsive-container-block.Container {
       flex-direction: column;
@@ -922,9 +954,9 @@ footer > div {
     border: none;
   }
 
-  /* .btn-nav{
+  .btn-nav{
     display: none;
-  } */
+  }
   
   /* .btn-nav {
     position: fixed;
@@ -1023,6 +1055,7 @@ footer > div {
   .nav-item {
     margin: 40px auto;
     text-align: center;
+    z-index: 2000;
   }
   
   .animated {
@@ -1167,4 +1200,10 @@ footer > div {
   .hidden {
     display: none;
   }
+
+
+
+
+
+  
 
