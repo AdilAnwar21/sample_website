@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Store</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
@@ -31,11 +32,36 @@
                 <a href="#">Brand Name</a>
             </div>
             <div class="links">
-                <a href="about_us">About Us</a>
-                <a href="">Products</a>
+                <a href="#about_us">About Us</a>
+                <a href="#products">Products</a>
                 <a href="">Contact Us</a>
+                
             </div>
+            <i class="ri-menu-line" onclick="toggleNav(); return false;"></i>
         </nav>
+
+        <!-- <div class="nav-content hideNav hidden">
+          <i class="ri-close-circle-line" style="color: white;"></i>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#home" onclick="hello()" class="item-anchor">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="item-anchor">About</a></li>
+            <li class="nav-item"><a href="projects.html" class="item-anchor">Projects</a></li>
+            <li class="nav-item"><a href="contact.html" class="item-anchor">Contact</a></li>
+          </ul>
+          
+          
+        </div> -->
+
+        <div class="nav-content hideNav hidden">
+          <i class="ri-close-circle-line close-icon" onclick="toggleNav()"></i>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#home" onclick="toggleNav()" class="item-anchor">Home</a></li>
+            <li class="nav-item"><a href="#about_us" onclick="toggleNav()" class="item-anchor">About</a></li>
+            <li class="nav-item"><a href="#products" onclick="toggleNav()" class="item-anchor">Projects</a></li>
+            <li class="nav-item"><a href="contact.html" onclick="toggleNav()" class="item-anchor">Contact</a></li>
+          </ul>
+        </div>
+
 
         <div class="header">
             <h1>B</h1>
@@ -43,14 +69,18 @@
             <h1>a</h1>
             <h1>n</h1>
             <h1>d</h1>
-            <!-- <h1></h1>
+            <h1></h1>
             <h1>N</h1>
             <h1>a</h1>
             <h1>m</h1>
-            <h1>e</h1> -->
+            <h1>e</h1>
             <!-- <h1>a</h1>
             <h1>l</h1> -->
         </div>
+
+        <section id="home">
+          
+        </section>
 
 
         <section class="about_us" id="about_us">
@@ -83,6 +113,97 @@
               </div>
         </section>
 
+        <!-- <section class="products" id="products">
+
+          <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+              <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+            </div>
+            <div class="product-details">
+              <span class="product-catagory">Women,bag</span>
+              <h4><a href="">Women leather bag</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+              <div class="product-bottom-details">
+                <div class="product-price"><small>$96.00</small>$230.99</div>
+                <div class="product-links">
+                  <a href=""><i class="fa fa-heart"></i></a>
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section> -->
+
+        <section class="products" id="products">
+          <div class="container-prod">
+            <div class="product-grid">
+              <!-- Product 1 -->
+              <div class="product-card">
+                <div class="badge">Hot</div>
+                <div class="product-tumb">
+                  <img src="assets/Firefly multiple leather keychains on a white surface (it should be leather) 66909.jpg" alt="">
+                </div>
+                <div class="product-details">
+                  <span class="product-catagory">KeyChains</span>
+                  <h4><a href="">leather KeyChains</a></h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+                  <div class="product-bottom-details">
+                    <div class="product-price"><small>$96.00</small>$230.99</div>
+                    <div class="product-links">
+                      <a href=""><i class="fa fa-heart"></i></a>
+                      <a href=""><i class="fa fa-shopping-cart"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Product 2 -->
+              <div class="product-card">
+                <div class="badge">New</div>
+                <div class="product-tumb">
+                  <img src="assets/Firefly create me a leather wallet highlighted image with a watch on side and the main attraction mu (1).jpg" alt="">
+                </div>
+                <div class="product-details">
+                  <span class="product-catagory">Men,Wallet</span>
+                  <h4><a href="">Men leather Wallet</a></h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+                  <div class="product-bottom-details">
+                    <div class="product-price"><small>$120.00</small>$250.99</div>
+                    <div class="product-links">
+                      <a href=""><i class="fa fa-heart"></i></a>
+                      <a href=""><i class="fa fa-shopping-cart"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Product 3 -->
+              <div class="product-card">
+                <div class="badge">Sale</div>
+                <div class="product-tumb">
+                  <img src="assets/Firefly create me the image of a beautiful leather belts for men 39587.jpg" alt="">
+                </div>
+                <div class="product-details">
+                  <span class="product-catagory">Men,Belts</span>
+                  <h4><a href="">Men leather Belts</a></h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+                  <div class="product-bottom-details">
+                    <div class="product-price"><small>$200.00</small>$300.99</div>
+                    <div class="product-links">
+                      <a href=""><i class="fa fa-heart"></i></a>
+                      <a href=""><i class="fa fa-shopping-cart"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button-container">
+              <button class="view-more">View More</button>
+            </div>
+          </div>
+        </section>
+        
+
 
         <!-- <footer>
             <div class="footer-copy">
@@ -113,6 +234,7 @@
         https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js
         "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
