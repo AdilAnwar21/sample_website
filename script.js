@@ -207,5 +207,40 @@ function hello(){
     console.log("kjndcjnwjiw")
 }
 
+gsap.from(".contact-form-container", {
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    ease: "power3.out",
+    scrollTrigger: {
+        trigger: ".contact-form-container",
+        start: "top 80%", // Animation starts when 80% of the container enters the viewport
+        toggleActions: "play none none reset", // Replay animation every time it's in view
+    },
+});
 
+document.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+    const homeSection = document.getElementById("home");
+
+    // Check if the scroll position is past the home section
+    const homeHeight = homeSection.offsetHeight;
+    if (window.scrollY > homeHeight) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+gsap.from("#footer", {
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: "#footer",
+      start: "top 90%", 
+      toggleActions: "play none none reset", 
+    },
+  });
 
