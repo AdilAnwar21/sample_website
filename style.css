@@ -10,6 +10,8 @@ html, body {
     font-family: "Poppins", system-ui;
     /* overflow-x: hidden; */
     scroll-behavior: smooth;
+    overflow: visible; /* Ensure it's not hidden */
+    position: static; /* Avoid fixed positioning unless necessary */
 }
 
 /* .container{

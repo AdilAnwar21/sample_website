@@ -25,6 +25,7 @@
 // function enableScroll() {
 //      window.onscroll = function() {};
 // }
+// e.preventDefault();
 
 function startLoader() {
     let counterElement = document.querySelector(".count p");
